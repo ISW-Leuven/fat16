@@ -4,9 +4,10 @@ This repo contains a few things to help you find / calculate FAT16 properties, .
 ## Table of contents
 - [GPT Header](#gpt-header)
 - [GPT Entry](#gpt-entry)
-- [File Contents](#file-contents)
 - [Boot Sector](#boot-sector)
 -  - [Disk Layout](#disk-layout)
+- [File Contents](#file-contents)
+- [Sources](#sources)
 
 ## GPT Header
 ![GPT Header Image](gpt_header.png)
@@ -14,9 +15,6 @@ This repo contains a few things to help you find / calculate FAT16 properties, .
 
 ## GPT Partition Entry
 ![GPT Partition Image](gpt_partition.png)
-
-## File Contents
-- File contents = `Start of data region` + `cluster_size` * `(cluster_index - 2)`
 
 ## Boot Sector
 ![Boot sector](boot_sector.png)
@@ -28,6 +26,8 @@ This repo contains a few things to help you find / calculate FAT16 properties, .
 - Root Directory Size [BYTES] = `Number of possible root entries` * `Directory Entry size`  (often 32 bytes)
 - Data Region Address = `Root Directory Address` + `Root Directory Size` [IN HEX]
 
+## File Contents
+- File contents = `Start of data region` + `cluster_size` * `(cluster_index - 2)`
 
 ## Sources
 - UCLL
