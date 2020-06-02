@@ -16,6 +16,7 @@ This repo contains a few things to help you find / calculate FAT16 properties, .
 - Root Directory Size [BYTES] = `Number of possible root entries` * `Directory Entry size`  (often 32 bytes)
 - Data Region Address = `Root Directory Address` + `Root Directory Size` [IN HEX]
 
+![GPT Partition Image](gpt_partition.png)
 
 ## File Contents
 - File contents = `Start of data region` + `cluster_size` * `(cluster_index - 2)`
