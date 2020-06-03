@@ -31,6 +31,7 @@ The info in this repo may contain errors. Please do not rely on this and always 
 - Root Directory Address = First FAT Address + (`Small number of sectors` * `Sectors per cluster`) [HEX]
 - Root Directory Size [BYTES] = `Number of possible root entries` * `Directory Entry size`  (often 32 bytes)
 - Data Region Address = `Root Directory Address` + `Root Directory Size` [IN HEX]
+- Total FAT16 Volume in Bytes = `Small number of sectors` * `Bytes per sector`
 
 ## Files
 ![Files and directories](files_directories.png)
