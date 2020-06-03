@@ -1,12 +1,15 @@
 # FAT16
 This repo contains a few things to help you find / calculate FAT16 properties, ...
 
+## Disclaimer
+The info in this repo may contain errors. Please do not rely on this and always check it for yourself!
+
 ## Table of contents
 - [GPT Header](#gpt-header)
 - [GPT Entry](#gpt-entry)
 - [Boot Sector](#boot-sector)
 -  - [Disk Layout](#disk-layout)
-- [File & Directories](#files)
+- [Files & Directories](#files)
 -  - [Time](#time)
 -  - [Date](#date)
 - [Sources](#sources)
@@ -24,7 +27,8 @@ This repo contains a few things to help you find / calculate FAT16 properties, .
 ### Disk Layout
 - Boot Sector Address [HEX] = `First LBA` (GPT Entry, DEC) * `512`
 - Size of cluster [BYTES] = `Bytes per sector` * `Sectors per cluster`
-- Root Directory Address = `Small number of sectors` * `bytes per sector`
+- First FAT Address [HEX] = `Boot Sector Address` + `Size of cluster` [IN DEC]
+- Root Directory Address = First FAT Address + (`Small number of sectors` * `Sectors per cluster`) [HEX]
 - Root Directory Size [BYTES] = `Number of possible root entries` * `Directory Entry size`  (often 32 bytes)
 - Data Region Address = `Root Directory Address` + `Root Directory Size` [IN HEX]
 
