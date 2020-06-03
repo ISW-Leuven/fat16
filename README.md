@@ -36,7 +36,8 @@ The info in this repo may contain errors. Please do not rely on this and always 
 ## Files
 ![Files and directories](files_directories.png)
 
-- File contents = `Start of data region` + `cluster_size` * `(cluster_index - 2)`
+- To find the next cluster index = `First FAT Address` + `Previous Cluster` * 2
+- File contents of the cluster = `Start of data region` + `cluster_size` * `(cluster_index - 2)`
 
 ### Time
 1. First 5 bits for hours
